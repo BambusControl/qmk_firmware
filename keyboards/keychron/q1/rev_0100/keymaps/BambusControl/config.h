@@ -1,0 +1,34 @@
+#pragma once
+
+/* RGB Matrix Configuration */
+#ifdef RGB_MATRIX_ENABLE
+#    define RGB_DISABLE_WHEN_USB_SUSPENDED
+#    define CAPS_LOCK_INDICATOR_COLOR RGB_OFF
+#    define CAPS_LOCK_INDICATOR_LIGHT_ALPHAS
+#    define FN_LAYER_TRANSPARENT_KEYS_OFF
+#endif
+
+/* Enable disabled RGB effects */
+#ifdef DISABLE_RGB_MATRIX_GRADIENT_UP_DOWN
+#    undef DISABLE_RGB_MATRIX_GRADIENT_UP_DOWN
+#endif
+
+#ifdef DISABLE_RGB_MATRIX_GRADIENT_LEFT_RIGHT
+#    undef DISABLE_RGB_MATRIX_GRADIENT_LEFT_RIGHT
+#endif
+
+#ifdef DISABLE_RGB_MATRIX_JELLYBEAN_RAINDROPS
+#   undef DISABLE_RGB_MATRIX_JELLYBEAN_RAINDROPS
+#endif
+
+#ifdef DISABLE_RGB_MATRIX_HUE_WAVE
+#   undef DISABLE_RGB_MATRIX_HUE_WAVE
+# endif
+
+/* RGB keypress reactions */
+#ifndef RGB_MATRIX_KEYPRESSES
+#   define RGB_MATRIX_KEYPRESSES
+#endif
+
+/* Overwrite default heatmap value */
+#define RGB_MATRIX_TYPING_HEATMAP_DECREASE_DELAY_MS 75
